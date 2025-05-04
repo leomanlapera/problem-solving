@@ -1,11 +1,14 @@
 export const getActiveUsersByRole = (
-  users: Array<{
-    id: number;
-    name: string;
-    role: string;
-    isActive: boolean;
-  }>,
-  role: string
+  users:
+    | Array<{
+        id: number;
+        name: string;
+        role: string;
+        isActive: boolean;
+      }>
+    | null
+    | undefined,
+  role: string | null | undefined
 ) => {
   if (!Array.isArray(users) || typeof role !== "string") return [];
 
