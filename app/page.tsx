@@ -1,19 +1,22 @@
-import { Person, groupByFirstLetter } from "@/utils/groupByFirstLetter";
+import {
+  Course,
+  organizeCoursesByCategoryAndInstructor,
+} from "@/utils/organizeCoursesByCategoryAndInstructor";
 
-const people: Person[] = [
-  { name: "June", age: 40 },
-  { name: "Alice", age: 21 },
-  { name: "Charlie", age: 21 },
-  { name: "Carol", age: 24 },
-  { name: "Bob", age: 25 },
-  { name: "Chad", age: 19 },
-  { name: "Daniel", age: 40 },
-  { name: "Eve", age: 30 },
-  { name: "David", age: 25 },
+const courses: Course[] = [
+  { title: "React Basics", category: "Programming", instructor: "Alice" },
+  { title: "Advanced CSS", category: "Design", instructor: "Bob" },
+  {
+    title: "TypeScript Fundamentals",
+    category: "Programming",
+    instructor: "Alice",
+  },
+  { title: "UX Principles", category: "Design", instructor: "Carol" },
+  { title: "Node.js APIs", category: "Programming", instructor: "Dave" },
 ];
 
 const Page = () => {
-  console.log(groupByFirstLetter(people));
+  console.log(organizeCoursesByCategoryAndInstructor(courses));
   return <div>Page</div>;
 };
 
